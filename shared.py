@@ -12,3 +12,14 @@ def standardize(X_train, X_other):
     X_other_scaled = (X_other - mean) / std
 
     return X_train_scaled, X_other_scaled
+
+def accuracy(y_true, y_pred):
+    return accuracy_score(y_true, y_pred)
+
+
+def precision(y_true, y_pred):
+    return precision_score(y_true, y_pred, zero_division=0)
+
+
+def recall(y_true, y_pred):
+    return recall_score(y_true, y_pred, zero_division=0)
